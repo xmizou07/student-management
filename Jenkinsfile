@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     tools {
-        jdk 'JAVA_HOME'
-        maven 'M2_HOME'
+        jdk 'JAVA_HOME'      // matches your Jenkins JDK tool name
+        maven 'M2_HOME'      // matches your Jenkins Maven tool name
     }
 
     environment {
-        JAVA_HOME = tool name: 'Java17', type: 'jdk'
-        M2_HOME   = tool name: 'Maven3', type: 'maven'
+        JAVA_HOME = tool name: 'JAVA_HOME', type: 'jdk'
+        M2_HOME   = tool name: 'M2_HOME', type: 'maven'
         PATH      = "${env.M2_HOME}/bin:${env.JAVA_HOME}/bin:${env.PATH}"
     }
 
