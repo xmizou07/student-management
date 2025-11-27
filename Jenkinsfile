@@ -35,18 +35,14 @@ pipeline {
 
     post {
         success {
-            echo 'Build réussi ! 
-
-
+            echo '''Build réussi !
 Click to learn more
-'
+'''
         }
         failure {
-            echo 'Échec du build 
-
-
+            echo '''Échec du build
 Click to learn more
-'
+'''
         }
     }
 }
